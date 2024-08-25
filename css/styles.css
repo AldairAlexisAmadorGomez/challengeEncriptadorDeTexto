@@ -1,0 +1,325 @@
+:root{
+    --bg-prymary: #0A3871;
+    --bg-secondary: #D8DFE8;
+    --bg-tertiary: #F3F5FC;
+    --bg-quarter: #FFF;
+    --color-prymary: #fff;
+    --color-secondary: #0A3871;
+    --color-tertiary: #495057;
+    --bg-button-prymary: #0A3871;
+    --bg-button-secondary: #D8DFE8;
+}
+
+@font-face {
+    font-family: "Inter_24pt-Bold";
+    src: url(../storage/font/Inter/Inter_24pt-Bold.ttf);
+}
+@font-face {
+    font-family: "Inter_18pt-Regular";
+    src: url(../storage/font/Inter/Inter_18pt-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter_28pt-Regular";
+    src: url(../storage/font/Inter/Inter_28pt-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter_24pt-Regular";
+    src: url(../storage/font/Inter/Inter_24pt-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: var(--bg-secondary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--bg-prymary);
+    border-radius: 3px;
+	border: none;
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--bg-tertiary);
+}
+
+header{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+.contenedor_header{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--bg-tertiary);
+}
+
+.main_input{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;    
+    padding-top: 80px;
+    padding-left: 240px;
+    padding-right: 40px;
+    padding-bottom: 72px;
+    flex: 4;
+}
+
+.main_input textarea::-webkit-input-placeholder {
+    color: var(--color-secondary);
+}
+
+.main_input textarea {
+    resize: none;
+    color: var(--color-secondary);
+    font-family: "Inter_28pt-Regular";
+    font-size: 32px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.input_condition{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_menssage{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input_condition small{
+    color: var(--color-tertiary);
+    font-family: "Inter_18pt-Regular";
+    font-size: 12px;
+}
+
+.input_button{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.input_button button {
+    width: 100%;
+    height: 67px;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    font-family: "Inter_18pt-Regular";
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid var(--bg-prymary);
+}
+
+.input_button button:first-child{
+    background: var(--bg-button-prymary);
+    color: var(--color-prymary);
+}
+
+.input_button button:last-child{
+    background: var(--bg-button-secondary);
+    color: var(--color-secondary);
+}
+
+.ouput_menssage button{
+    background: transparent;
+}
+
+.main_ouput{
+    flex: 1;
+    padding: 64px 40px 40px;
+}
+
+.ouput, .ouput_menssage{
+    background: var(--bg-quarter);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100%;
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px var(--bg-secondary);
+}
+
+.ouput_menssage textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: "Inter_28pt-Regular";
+    font-size: 24px;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ouput_menssage button {
+    background: var(--bg-button-prymary);
+    color: var(--color-prymary);
+    width: 150px;
+    height: 50px;
+    font-family: "Inter_18pt-Regular";
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.ouput_menssage{
+    justify-content: space-between;
+}
+
+.ouput img{
+    margin-bottom: 32px;
+}
+
+.ouput h1{
+    font-size: 24px;    
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: "Inter_24pt-Bold";
+}
+
+.ouput p{
+    font-family: "Inter_18pt-Regular";
+    font-size: 16px;
+    text-align: center;
+}
+
+.ouput_menssage p{
+    color: var(--color-tertiary);
+    font-family: "Inter_24pt-Regular";
+    font-size: 24px;
+}
+
+.active{
+    display: flex;
+}
+
+@media (max-width: 1277px) {
+    .main_input{
+        padding-left: 120px;
+    }
+}
+@media (max-width: 1170px) {
+    .main_input{
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 1087px) {
+    header{
+        left: 0;
+    }
+    main{
+        flex-direction: column;
+    }
+    .main_ouput{
+        padding-top: 0;
+    }
+    .ouput, .ouput_menssage{
+        width: 100%;
+    }
+    .ouput_menssage p{
+        margin-bottom: 32px;
+    }
+    .ouput img{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    header{
+        top: 24px;
+        left: -30px;
+    }
+    .main_input{
+        padding-top: 152px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .main_ouput{
+        padding: 0 16px 16px ;
+    }
+    .input_button{
+        flex-direction: column;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-quarter);
+    padding: 20px;
+    border-radius: 24px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0px 24px 32px -8px var(--bg-secondary);
+}
+
+#closeModalButton {
+    background: var(--bg-button-prymary);
+    color: var(--color-prymary);
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: "Inter_18pt-Regular";
+    font-size: 16px;
+}

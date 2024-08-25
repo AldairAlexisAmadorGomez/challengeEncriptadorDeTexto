@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar/Desencriptar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="storage/img/Logo.png">
+</head>
+<body>
+    <header>
+        <div class="contenedor_header">
+            <img src="storage/img/Logo.png" alt="logo Alura" class="contenedor_logo">
+        </div>
+    </header>
+    <main>
+        <section class="main_input">
+            <textarea id="entrada-texto" name="chain" class="entrada-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="input_condition">
+                <div class="input_menssage">
+                    <img src="storage/img/Exclamacion.png"> 
+                    <small>Solo letras minúsculas y sin acentos</small>
+                </div>
+                <div class="input_button">
+                    <button onclick="encryptText()">Encriptar</button>
+                    <button onclick="decryptText()">Desencriptar</button>                    
+                </div>
+            </div>
+        </section>
+        <section class="main_ouput">
+            <article id="outputImage" class="ouput active">
+                <img src="storage/img/Muñeco.png">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </article>
+            <article class="ouput_menssage">
+                <textarea id="outputText" readonly></textarea>
+                <button id="copyButton" onclick="copyText()">Copiar</button>
+            </article>
+        </section>      
+    </main>
+    <footer>
+        Creado por Aldair Alexis Amador Gomez &copy; 2024
+    </footer>
+
+    <div id="modalAlert" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button id="closeModalButton">Cerrar</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
